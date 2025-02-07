@@ -1,4 +1,11 @@
 
+$(document).ready(function() {
+  // 페이지 새로 고침 시 자동으로 page1으로 스크롤 이동
+  $('html, body').animate({ scrollTop: $('#page1').offset().top }, 0);
+});
+
+//------------------------
+
 
 $(document).ready(function() {
   $('#nav-toggle').click(function() {
