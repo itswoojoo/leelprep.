@@ -11,7 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Swiper 스타일 시트 추가 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 
   <link rel="stylesheet" href="main.css">
@@ -19,39 +20,43 @@
 
 <body>
 
-  <nav>
-    <div class="navL">
-      <a href="tel:1833-8038">
-        <img id="logogold" src="img/logogold.svg">
-      </a>
-    </div>
 
-    <div class="navR">
-      <div><a href="tel:1833-8038" class="link"><div id="phoneN">1833-8038</div></a></div>
-      <a href="tel:1833-8038"><img id="phoneIcon" src="img/header-phone.png"></a>
-
-       <!-- 토글 버튼 -->
-      <div class="nav-toggle" id="nav-toggle"> 
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-    <!-- 토글 메뉴 -->
-    <div class="nav-menu" id="nav-menu">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">사업개요</a></li>
-        <li><a href="#">입지환경</a></li>
-        <li><a href="#">방문예약</a></li>
-      </ul>
-    </div>
-    
-  </nav>
   
 <!--  -->
-  <div class="page" id="page1">
+  <div class="page1" id="page1">
+
+    <nav>
+      <div class="navL">
+        <a href="#page1">
+          <img id="logogold" src="img/logogold.svg">
+        </a>
+      </div>
+  
+      <div style="flex-grow: 1;"></div>
+
+      <div class="navR">
+        <div><a href="tel:1833-8038" class="link"><div id="phoneN">1833-8038</div></a></div>
+        <a href="tel:1833-8038"><img id="phoneIcon" src="img/header-phone.png"></a>
+  
+         <!-- 토글 버튼 -->
+        <div class="nav-toggle" id="nav-toggle"> 
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  
+      <!-- 토글 메뉴 -->
+      <div class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#page1">HOME</a></li>
+          <li><a href="#page2">사업개요</a></li>
+          <li><a href="#page3">입지환경</a></li>
+          <li><a href="#page6">방문예약</a></li>
+        </ul>
+      </div>
+      
+    </nav>
 
     <div class="main-background">  
     </div>
@@ -59,7 +64,15 @@
     <div class="main-content">
       <H1>The First, The Only</H1><br>
       <h3>부산의 첫 르엘, 센텀의 정점에 서다</h3>
+
     </div>
+
+    <button class="down-icon next-page">
+      <img src="img/화살표 doubledown.png">
+    </button>
+
+
+
 
   </div>
 
@@ -67,90 +80,144 @@
 
   <div class="page" id="page2">
 
-    <div class="p2Wrap">
-
-      <div class="PimgWrap">
-        <div class="carousel slide" id="pimgs">
-          <div class="carousel-indicators">
-            <button type="button" 
-            data-bs-target="#pimgs" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" 
-            data-bs-target="#pimgs" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" 
-            data-bs-target="#pimgs" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/전경2.jpg" class="d-block w-100" alt="전경2">
-            </div>
-            <div class="carousel-item">
-              <img src="img/전경.jpg" class="d-block w-100" alt="전경1">
-            </div>
-            <div class="carousel-item">
-              <img src="img/전경3.jpg" class="d-block w-100" alt="전경3">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#pimgs" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#pimgs" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/전경2.jpg"></div>
+        <div class="swiper-slide"><img src="img/전경.jpg"></div>
+        <div class="swiper-slide"><img src="img/전경3.jpg"></div>
+        <div class="swiper-slide"><img src="img/미디어파사드.webp"></div>
       </div>
-  
-      <div class="ProjectSum">
-
-        <ul class="mlist">
-          <li>
-            <span class="top">현장명 :</span>
-            <span class="bot">르엘 리버파크 센텀</span>
-          </li>
-          <li>
-            <span class="top">대지위치 :</span>
-            <span class="bot">부산광역시 해운대구 재송동 856-6번지 일원</span>
-          </li>
-          <li>
-            <span class="top">사업방식 :</span>
-            <span class="bot">공공기여 협상방식</span>
-          </li>
-          <li>
-            <span class="top">대지면적 :</span>
-            <span class="bot">46,464㎡</span>
-          </li>
-          <li>
-            <span class="top">건축면적 :</span>
-            <span class="bot">20,047,198㎡</span>
-          </li>
-          <li>
-            <span class="top">건축규모 :</span>
-            <span class="bot">지하6층 / 48층(1개동), 67층(5개동)</span>
-          </li>
-          <li>
-            <span class="top">세대수 :</span>
-            <span class="bot">2,070세대</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-
-
-     
-
+      <!-- 페이지네이션 -->
+      <div class="swiper-pagination"></div>
       
+      <!-- 네비게이션 (화살표) -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
     
+  
+    <div class="projectSum">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">OVERVIEW</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>현장명</td>
+            <td>르엘 리버파크 센텀</td>
+          </tr>
+          <tr>
+            <td>사업방식</td>
+            <td>공공기여 협상방식</td>
+          </tr>
+          <tr>
+            <td>대지위치</td>
+            <td>부산광역시 해운대구 재송동 856-6번지 일원</td>
+          </tr>
+          <tr>
+            <td>대지면적</td>
+            <td>46,464㎡</td>
+          </tr>
+          <tr>
+            <td>건축면적</td>
+            <td>20,047,198㎡</td>
+          </tr>
+          <tr>
+            <td>건축규모</td>
+            <td>지하6층 / 48층(1개동), 67층(5개동)</td>
+          </tr>
+          <tr>
+            <td>세대수</td>
+            <td>2,070세대</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+
+
   </div>
+
+  <!--  -->
+  
+  <div class="page" id="page3">
+
+
+    <video class="background-video" autoplay loop muted>
+      <source src="https://dli42s7vhz0x7.cloudfront.net/story3.mp4" type="video/mp4">
+    </video>
+
+    <div class="VContent">
+      <p>신세계 백화점, 벡스코 등 상업, 문화, 교통을 아우르는 <span>센텀시티</span>의 중심 인프라</p>
+      <p>부산의 대표적인 부촌, 다양한 예술과 문화를 향유하는 공간</p>
+      <p><span>해운대 센텀</span>, 이름만으로도 증명되는 가치</p>
+    </div>
+
+    
+    <button class="down-icon next-page">
+      <img src="img/화살표 doubledown.png">
+    </button>
+    
+  </div>
+
+  <div class="page" id="page4">
+
+    
+    <video class="background-video" autoplay loop muted>
+      <source src="https://dli42s7vhz0x7.cloudfront.net/story2.mp4" type="video/mp4">
+    </video>
+
+    <div class="VContent">
+      <p>부산의 경제, 문화, 교육 1번지  <span>센텀</span></p>
+      <p>당 사업지 반경 1km 내 초, 중, 고등학교 위치</p>
+      <p>밀집된 학원가, 뛰어난 교육 환경 속 변하지 않는 자부심</p>
+
+
+    </div>
+
+    <button class="down-icon next-page">
+      <img src="img/화살표 doubledown.png">
+    </button>
+
+
+  </div>
+
+  <div class="page" id="page5">
+
+    <div class="map">
+      <img src="img/map1.jpg">
+    </div>
+
+    <a href="tel:1833-8038">
+      <div class="mark">
+        <button class="close-btn">X</button>
+        <img src="img/logo2.png">
+        <H1>방문예약 : 1833-8038</H1>
+      </div>
+
+    </a>
+
+
+  </div>
+
+  <div class="page" id="page6">
+
+  </div>
+
+
+
+
 
  
   <!-- Jquery cdn -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Swiper 자바스크립트 파일 추가 -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- 외부 JavaScript 파일 연결 -->
   <script src="main.js"></script>
